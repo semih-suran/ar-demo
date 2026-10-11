@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0f" />
+    <title>AR Product Demo — See it in your space</title>
+    <meta
+      name="description"
+      content="Demo product page showcasing photos, video and a 3D model with 'View in your space' AR."
+    />
+    <!--
+      <model-viewer> is a web component loaded via CDN. It powers the AR experience:
+      iOS Safari → USDZ (Quick Look). Android Chrome → GLB (Scene Viewer).
+    -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

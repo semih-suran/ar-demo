@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+
+/* Base resets for the demo page. Keep it tiny. */
+:root {
+  color-scheme: light;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f7;
+  color: #0b0b0f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* model-viewer AR button — custom slot styled as primary CTA. */
+model-viewer::part(default-ar-button) {
+  display: none;
+}
+
+.ar-cta {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 999px;
+  background: #0b0b0f;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 120ms ease, background 120ms ease;
+}
+.ar-cta:hover {
+  background: #2a2a32;
+  transform: translateY(-1px);
+}
+.ar-cta::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2 2 22h20L12 2zm0 4.84L18.39 20H5.61L12 6.84z'/></svg>") center / contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'><path d='M12 2 2 22h20L12 2zm0 4.84L18.39 20H5.61L12 6.84z'/></svg>") center / contain no-repeat;
+}
