@@ -1,6 +1,6 @@
 # AR Product Demo
 
-A single-page, mobile-friendly product showcase that demonstrates how photos, video, and a 3D model with **"View in your space"** AR will look in the shop we're building.
+A single-page, mobile-friendly product showcase that demonstrates how photos and a 3D model with **"View in your space"** AR will look in the shop we're building.
 
 Open on a phone to experience AR:
 - **iOS Safari** → Quick Look (USDZ)
@@ -24,8 +24,6 @@ public/assets/
 ├── photo_02.jpg         # detail / angle 2
 ├── photo_03.jpg         # detail / angle 3
 ├── photo_04.jpg         # in-room / lifestyle
-├── video_01.mp4         # H.264 MP4 (≤ ~10 MB)
-├── video_01_poster.jpg  # optional, but recommended
 ├── 3d_01.glb            # GLB model (target ≤ 5 MB, Draco if larger)
 └── 3d_01.usdz           # USDZ model — required for iOS AR
 ```
@@ -33,7 +31,7 @@ public/assets/
 **Tips:**
 - If you only have a GLB and need USDZ: convert with Apple's `usdzconvert` or upload at https://www.usdzcreator.com.
 - For large GLBs, optimize with `gltf-transform optimize` (Draco compression).
-- The README and demo assume JPG/MP4 — change `src/data/product.ts` if your files use different extensions.
+- The README and demo assume JPG — change `src/data/product.ts` if your files use a different extension.
 
 ## Deploy to Vercel
 

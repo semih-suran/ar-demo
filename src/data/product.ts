@@ -9,7 +9,6 @@ export type Product = {
   description: string
   features: string[]
   photos: string[] // 4 photos
-  video: { src: string; poster: string }
   model: { glb: string; usdz: string; alt: string }
 }
 
@@ -34,10 +33,6 @@ export const product: Product = {
     '/assets/photo_03.jpg',
     '/assets/photo_04.jpg',
   ],
-  video: {
-    src: '/assets/video_01.mp4',
-    poster: '/assets/video_01_poster.jpg',
-  },
   model: {
     glb: '/assets/3d_01.glb',
     usdz: '/assets/3d_01.usdz',
