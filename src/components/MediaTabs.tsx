@@ -1,9 +1,8 @@
-// Tab switcher between Photos / Video / 3D View. Matches Amazon's media-tab UX.
-type Tab = 'photos' | 'video' | '3d'
+// Tab switcher between Photos / 3D View. Matches Amazon's media-tab UX.
+type Tab = 'photos' | '3d'
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'photos', label: 'Photos' },
-  { id: 'video', label: 'Video' },
   { id: '3d', label: '3D View' },
 ]
 

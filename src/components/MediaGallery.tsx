@@ -2,10 +2,9 @@ import { useState } from 'react'
 import type { Product } from '../data/product'
 import { MediaTabs } from './MediaTabs'
 import { PhotoGallery } from './PhotoGallery'
-import { VideoPanel } from './VideoPanel'
 import { ARModelViewer } from './ARModelViewer'
 
-type Tab = 'photos' | 'video' | '3d'
+type Tab = 'photos' | '3d'
 
 export function MediaGallery({ product }: { product: Product }) {
   const [tab, setTab] = useState<Tab>('photos')
@@ -16,10 +15,6 @@ export function MediaGallery({ product }: { product: Product }) {
 
       {tab === 'photos' && (
         <PhotoGallery photos={product.photos} alt={product.title} />
-      )}
-
-      {tab === 'video' && (
-        <VideoPanel src={product.video.src} poster={product.video.poster} />
       )}
 
       {tab === '3d' && (
